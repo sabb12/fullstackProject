@@ -1,7 +1,7 @@
 const express = require("express");
 const database = require("./connect");
 const { ObjectId } = require("mongodb");
-const ObjectId = require("mongodb").ObjectId;
+const objectId = require("mongodb").ObjectId;
 
 let postRoutes = express.Router();
 
