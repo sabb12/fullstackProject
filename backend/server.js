@@ -13,6 +13,7 @@ const connect = require("./connect");
 const express = require("express");
 const cors = require("cors"); // library
 const posts = require("./postRoutes");
+const users = require("./userRoutes");
 
 const app = express();
 const PORT = 3000;
@@ -21,6 +22,7 @@ const PORT = 3000;
 app.use(cors()); //tells express how to handle sharing resourse across different domain
 app.use(express.json()); //tells express to parse request in JSON format
 app.use(posts);
+app.use(users);
 
 //telling our local computer, where hosting our server to listen to the port 3000
 app.listen(PORT, () => {
